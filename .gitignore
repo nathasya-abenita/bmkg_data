@@ -1,0 +1,4 @@
+# Ignore any pycache file
+**/__pycache__ 
+# Ignore any Jupyter Notebook file
+**/*.ipynb 
