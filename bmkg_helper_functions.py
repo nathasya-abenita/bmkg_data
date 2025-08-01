@@ -93,7 +93,7 @@ def wind_label_to_degree(label: str) -> float:
     """Convert wind direction label (e.g., 'N', 'NE', etc.) to meteorological degree."""
 
     # Strip label
-    label = label.strip()
+    label = str(label).strip()
 
     # Define direction dictionary/map
     direction_map = {
