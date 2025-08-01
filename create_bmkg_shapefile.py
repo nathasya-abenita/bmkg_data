@@ -1,10 +1,17 @@
+"""
+Create BMKG stations location shapefile
+
+Author: CHRN
+Date: June 2025
+"""
+
 import xarray as xr
 import geopandas as gpd
 import pandas as pd
 from shapely.geometry import Point
 
 # Read data
-nc_path = r'C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\bmkg_2025.nc'
+nc_path = r'C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\bmkg_2025_final.nc'
 ds = xr.open_dataset(nc_path)
 
 # Prepare DataFrame for the stations info

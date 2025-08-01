@@ -23,7 +23,7 @@ def create_gdf (list):
     return gdf
 
 # Read BMKG stations shapefile
-bmkg_shp_path = r'..\BMKG meteo database\BMKG Stations Shapefile\bmkg_2025.shp'
+bmkg_shp_path = r"C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\BMKG Stations Shapefile\bmkg_2025.shp"
 gdf_bmkg = gpd.read_file(bmkg_shp_path)
 
 # Read watershed shapefile
