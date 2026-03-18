@@ -11,7 +11,7 @@ import pandas as pd
 from shapely.geometry import Point
 
 # Read data
-nc_path = r'C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\bmkg_2025_final.nc'
+nc_path = r'./output/bmkg_2025_final.nc'
 ds = xr.open_dataset(nc_path)
 
 # Prepare DataFrame for the stations info
@@ -33,4 +33,4 @@ gdf = gpd.GeoDataFrame(df, geometry="geometry", crs="EPSG:4326")
 gdf = gdf.rename(columns={'station_name': 'name'})
 
 # Export
-gdf.to_file(filename=r'C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\BMKG Stations Shapefile\bmkg_2025.shp')
+gdf.to_file(filename=r'./output/shp/bmkg_2025.shp')

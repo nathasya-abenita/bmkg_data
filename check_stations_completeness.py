@@ -88,7 +88,7 @@ print('Number of available stations in website:', len(set(station_names)))
 #%% Collect station names from downloaded data
 
 # List Excel files' path
-data_path = r'C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\Raw Data'
+data_path = r'/home/nathasya/Documents/Witteveen Bos 2024-2025/Data/BMKG Raw Data 2025'
 excel_files = list_excel_files_path(data_path)
 
 # Save station names

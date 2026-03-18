@@ -6,7 +6,7 @@ from bmkg_helper_functions import *
 
 # Inputs
 output_file = 'bmkg_2025_final.nc'
-data_folder_path = r'C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\Raw Data'
+data_folder_path = r'/home/nathasya/Documents/Witteveen Bos 2024-2025/Data/BMKG Raw Data 2025'
 
 # Read Excel file paths
 excel_files = list_excel_files_path(data_folder_path)
@@ -41,7 +41,7 @@ for path in excel_files:
         # station_df_list.append(df_clean)
 
 # Export as NC file
-placeholder_output_file = 'placeholder' + output_file
+placeholder_output_file = output_file
 ds = create_netcdf(station_dict_list, station_df_list, placeholder_output_file)
 
 # Resolving known issue, SS variable is exported for the first time as datetime object
