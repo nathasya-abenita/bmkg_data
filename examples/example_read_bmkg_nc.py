@@ -3,7 +3,7 @@ import xarray as xr
 import matplotlib.pyplot as plt
 
 # Read data
-path = r"C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\bmkg_2025_final.nc"
+path = r"./output/bmkg_2025_final.nc"
 ds = xr.open_dataset(path)
 
 # Filter by station name

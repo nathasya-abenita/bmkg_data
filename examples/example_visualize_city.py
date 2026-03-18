@@ -34,7 +34,7 @@ station_locations = [
 #%% Main program
 
 # Read internal BMKG shapefile
-bmkg_shp_path = r'./output/shp/bmkg_2025.shp'
+bmkg_shp_path = r'C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\BMKG Stations Shapefile\bmkg_2025.shp'
 gdf_bmkg = gpd.read_file(bmkg_shp_path)
 
 # Create geodataframe for locations input
