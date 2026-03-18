@@ -12,7 +12,7 @@ import pandas as pd
 from typing import List, Dict
 
 # Set the option to opt-in to future behavior
-pd.set_option('future.no_silent_downcasting', True)
+# pd.set_option('future.no_silent_downcasting', True)
 
 def list_excel_files_path (folder_dir: str) -> list[str]:
     '''Loop over each file in a folder directory, then store the paths if it is an Excel file'''
