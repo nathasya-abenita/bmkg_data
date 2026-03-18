@@ -23,21 +23,21 @@ def create_gdf (list):
     return gdf
 
 # Read BMKG stations shapefile
-bmkg_shp_path = r"C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\BMKG Stations Shapefile\bmkg_2025.shp"
+bmkg_shp_path = r"./output/shp/bmkg_2025.shp"
 gdf_bmkg = gpd.read_file(bmkg_shp_path)
 
 # Read watershed shapefile
-watershed_shp_path = r'C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\Indonesia Watershed Shapefile\Batas_DAS_KLHK.zip'
+watershed_shp_path = r'/home/nathasya/Documents/Witteveen Bos 2024-2025/Data/Indonesia Watershed Shapefile/Batas_DAS_KLHK.shp'
 gdf_watershed = gpd.read_file(watershed_shp_path).to_crs(crs=gdf_bmkg.crs)
 
 # Initialize figure
-fig, ax = plt.subplots(figsize=(12,6))
+fig, ax = plt.subplots()
 
 # Plot watershed boundaries
-gdf_watershed.boundary.plot(ax=ax, color='k', label='Watershed Boundaries', linewidth=1, zorder=1)
+gdf_watershed.boundary.plot(ax=ax, color='k', label='Watershed Boundaries', linewidth=0.6, zorder=1)
 
 # Plot BMKG stations
-gdf_bmkg.plot(ax=ax, color='tab:red', label='Available BMKG Stations', markersize=5, zorder=2)
+gdf_bmkg.plot(ax=ax, color='tab:red', label='Available BMKG Stations', markersize=3, zorder=2)
 
 # Plot limits
 bounds = gdf_watershed.total_bounds
