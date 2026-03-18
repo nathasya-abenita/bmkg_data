@@ -2,3 +2,5 @@
 **/__pycache__ 
 # Ignore any Jupyter Notebook file
 **/*.ipynb 
+# Ignore output
+/output
