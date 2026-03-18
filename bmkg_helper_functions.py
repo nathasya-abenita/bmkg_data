@@ -200,9 +200,3 @@ def create_netcdf(station_info_list: List[Dict[str, str]], data_list: List[pd.Da
     ds.to_netcdf(output_file)
     print(f'NetCDF file created: {output_file}')
     return ds
-
-if __name__ == "__main__":
-    path = r'C:\Users\CHRN\OneDrive - Witteveen+Bos\Climate Resilience\Water Management\BMKG meteo database\Raw Data\Stasiun Geofisika Bandung - laporan_iklim_harian-250501215248.xlsx'
-    df = read_excel_file_for_data(path)
-    df_clean = clean_data(df)
-    print(df_clean)
